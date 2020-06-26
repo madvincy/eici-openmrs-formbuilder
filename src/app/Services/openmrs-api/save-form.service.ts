@@ -53,7 +53,7 @@ export class SaveFormService {
   getResourceUUID(formUUID, valueReference) {
     const body = {
         name: 'JSON schema',
-        dataType: 'AmpathJsonSchema',
+        dataType: 'InternationalCancerInstituteJsonSchema',
         valueReference: valueReference
     };
     return this.http.post(`${this.baseUrl}/ws/rest/v1/form/${formUUID}/resource`, body, {headers: this.headers})

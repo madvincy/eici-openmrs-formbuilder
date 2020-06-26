@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Using git
 
-Run `git clone https://github.com/AMPATH/ng2-openmrs-formbuilder.git` to clone the repo locally.
+Run `git clone https://github.com/ICI-KENYA/ng2-openmrs-formbuilder.git` to clone the repo locally.
 
 Run `cd ng2-openmrs-formbuilder`
 
@@ -17,7 +17,7 @@ Then `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ### Using Dockerfile
 
-Run `git clone https://github.com/AMPATH/ng2-openmrs-formbuilder.git` to clone the repo locally.
+Run `git clone https://github.com/ICI-KENYA/ng2-openmrs-formbuilder.git` to clone the repo locally.
 
 Run `docker build -t ng2-openmrs-formbuilder:1.2-alpha .`  (don't forget the fullstop at the end)
 

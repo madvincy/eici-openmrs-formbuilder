@@ -49,7 +49,7 @@ export class SaveFormsComponent extends DialogComponent<SaveFormModel, any> impl
   }
 
   ngOnInit(){
-    _.includes(this.name, 'component') ? this.formType = Constants.COMPONENT : this.formType = Constants.POC;
+    _.includes(this.name, 'component') ? this.formType = Constants.COMPONENT : this.formType = Constants.EICI;
 
       this.encounterTypes.forEach(encounterType => {
         if (encounterType.display === this.encounterType) {

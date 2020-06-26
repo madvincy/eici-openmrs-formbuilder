@@ -16,7 +16,7 @@ export class Constants {
 
       public static readonly COMPONENT = "component";
 
-      public static readonly POC = "poc";
+      public static readonly EICI = "eici";
 
       public static readonly FORM_TYPE = "formType";
     }

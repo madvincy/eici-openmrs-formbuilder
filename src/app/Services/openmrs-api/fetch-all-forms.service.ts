@@ -32,7 +32,7 @@ constructor(private http: HttpClient,
 
    fetchAllPOCForms() {
     const v = 'custom:(uuid,name,encounterType:(uuid,name),version,published,resources:(uuid,name,dataType,valueReference))';
-    return this.http.get<any>(`${this.baseUrl}/ws/rest/v1/form?q=POC&v=${v}`, {headers: this.headers}).pipe(
+    return this.http.get<any>(`${this.baseUrl}/ws/rest/v1/form?q=EICI&v=${v}`, {headers: this.headers}).pipe(
       catchError((e) => {
         if (e.status === 0) {
           alert('Please check that you have internet connection and CORS is turned on then refresh.');

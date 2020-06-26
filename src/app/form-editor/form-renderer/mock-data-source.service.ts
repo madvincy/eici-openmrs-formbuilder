@@ -36,7 +36,7 @@ export class MockDataSourceService {
         },
         {
             value : 'ec07fc28-812f-4450-a8d1-4ebc3ec5d876',
-            label : 'Ampath Test Provider'
+            label : 'e-ICI Test Provider'
         }
         ];
         return Observable.create((observer: Subject<any>) => {
@@ -58,7 +58,7 @@ export class MockDataSourceService {
 }
 
   sampleProviderResolve(): Observable<any> {
-    const item = { value: '0', label: 'Ampath Test' };
+    const item = { value: '0', label: 'e-ICI Test' };
     return Observable.create((observer: Subject<any>) => {
         setTimeout(() => {
             observer.next(item);

@@ -69,7 +69,7 @@ export class ConceptService {
 
   public getConceptID(conceptUuid: string): Observable<any> {
     return this.http
-    .get(`https://ngx.ampath.or.ke/concept-server/api/${conceptUuid}`).pipe(
+    .get(`https://mrs.intercancer.com/concept-server/api/${conceptUuid}`).pipe(
     catchError((error: Response) => { console.error(error.status); return observableOf(error.json()); }));
   }
 

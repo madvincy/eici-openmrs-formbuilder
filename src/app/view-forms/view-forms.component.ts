@@ -103,8 +103,8 @@ export class ViewFormsComponent implements OnInit {
       console.log('tis but a component form');
       this.fetchAllFormsService.setFormType(Constants.COMPONENT);
     } else {
-      console.log('tis but a poc form');
-      this.fetchAllFormsService.setFormType(Constants.POC);
+      console.log('tis but a eici form');
+      this.fetchAllFormsService.setFormType(Constants.EICI);
     }
     this.router.navigate(['/edit', uuid]);
   }

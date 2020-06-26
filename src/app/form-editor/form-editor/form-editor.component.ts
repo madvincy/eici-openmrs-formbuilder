@@ -179,7 +179,7 @@ export class FormEditorComponent implements OnInit, OnDestroy, AfterViewChecked,
 
         _.includes(this.formMetadata.name, Constants.COMPONENT) ?
          this.localStorageService.setItem(Constants.FORM_TYPE, Constants.COMPONENT) :
-         this.localStorageService.setItem(Constants.FORM_TYPE, Constants.POC);
+         this.localStorageService.setItem(Constants.FORM_TYPE, Constants.EICI);
 
           })
           .catch(e => {
@@ -436,7 +436,7 @@ export class FormEditorComponent implements OnInit, OnDestroy, AfterViewChecked,
   }
 
   showSaveDialog(operation: string, newVersion ?: string) {
-    const dialogTitle = this.formType === Constants.POC ? 'POC FORM' : 'Component';
+    const dialogTitle = this.formType === Constants.EICI ? 'EICI FORM' : 'Component';
     this.dialogService.addDialog(SaveFormsComponent, {
 
         title: `Save ${dialogTitle}`,
@@ -457,7 +457,7 @@ export class FormEditorComponent implements OnInit, OnDestroy, AfterViewChecked,
       })
       .subscribe((res) => {
 
-        this.formMetadata.name.indexOf('component') > -1 ? this.formType = Constants.COMPONENT : this.formType = Constants.POC;
+        this.formMetadata.name.indexOf('component') > -1 ? this.formType = Constants.COMPONENT : this.formType = Constants.EICI;
         if (res && this.formType === Constants.COMPONENT && operation === 'new') {
           this.disableCanDeactivate = true;
           this.dialogService.addDialog(ConfirmComponent, {
@@ -512,7 +512,7 @@ export class FormEditorComponent implements OnInit, OnDestroy, AfterViewChecked,
     let forms = [];
     const sameFormsDifferentVersion = [];
     this.subscription = this.fectAllFormsService.fetchAllPOCForms().subscribe((POCForms: any) => {
-      forms = _.cloneDeep(POCForms.results); // currently only poc forms version 1
+      forms = _.cloneDeep(POCForms.results); // currently only eici forms version 1
       const formName = this.formListService.removeVersionInformation(this.formMetadata.name);
       forms.splice(index, 1);
       const formsWithoutVersionedNames = this.formListService.removeVersionInformationFromForms(forms);
